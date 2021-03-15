@@ -51,6 +51,10 @@ square = pygame.draw.rect(screen, color_0, (xxx, yyy, rrr, rrr))
 
 
 def new_ball():
+    """
+     рисует 1 шарик
+    :return:
+    """
     global x, y, r, color, sp_x, sp_y
     x += sp_x
     y += sp_y
@@ -68,6 +72,10 @@ def new_ball():
 
 
 def new_ball_1():
+    """
+    рисует 2 шарик
+    :return:
+    """
     global x1, y1, r1, color1, sp_x1, sp_y1
     x1 += sp_x1
     y1 += sp_y1
@@ -85,6 +93,10 @@ def new_ball_1():
 
 
 def click_ball():
+    """
+    считает очки за шарики
+    :return:
+    """
     global q, x0, y0
     dx_1 = x0 - x
     dy_1 = y0 - y
@@ -98,6 +110,10 @@ def click_ball():
 
 
 def click_square():
+    """
+    считает очки за квадрат
+    :return:
+    """
     global w, x00, y00
     dx_square = x00 - xxx
     dy_square = y00 - yyy
@@ -107,6 +123,10 @@ def click_square():
 
 
 def new_square():
+    """
+    рисует кадрат
+    :return:
+    """
     global xxx, yyy, rrr, sp_xxx, sp_yyy
     xxx += sp_xxx
     yyy += math.sin(xxx * math.pi / 180)
@@ -122,15 +142,20 @@ def new_square():
 
 
 def scores():
-    global l
-    l = q + w
-    print('scores end:', l)
+    """
+    считает итог
+    :return:
+    """
+    global a
+    a = q + w
+    print('scores end:', a)
 
 
 pygame.display.update()
 clock = pygame.time.Clock()
 finished = False
 
+# основной цикл кода
 while not finished:
     clock.tick(FPS)
     for event in pygame.event.get():
