@@ -3,10 +3,26 @@ from pygame.draw import *
 from random import randint
 import math
 
+
 pygame.init()
 
 FPS = 40
 screen = pygame.display.set_mode((1200, 900))  # создаём экран
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 pygame.display.set_caption("")  # создаем название
 
@@ -149,6 +165,8 @@ def scores():
     global a
     a = q + w
     print('scores end:', a)
+
+
 
 
 pygame.display.update()
